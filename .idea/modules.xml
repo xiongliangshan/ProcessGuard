@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/processguard.iml" filepath="$PROJECT_DIR$/processguard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xClient/xClient.iml" filepath="$PROJECT_DIR$/xClient/xClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xServer/xServer.iml" filepath="$PROJECT_DIR$/xServer/xServer.iml" />
+    </modules>
+  </component>
+</project>

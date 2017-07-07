@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xls.processguard">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,12 +26,29 @@
             android:name=".MyService"
             android:enabled="true"
             android:exported="true"
-            android:process=":remote">
+            android:process="com.xiong.processguardBD">
             <intent-filter>
-                <action android:name="com.xls.test.aidl.xiong"/>
+                <action android:name="com.xls.test.aidl.xiong" />
             </intent-filter>
-
         </service>
+        <service
+            android:name=".LocalService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="xiong.liang.shan" />
+                <action android:name="shan.liang.xiong" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
 </manifest>

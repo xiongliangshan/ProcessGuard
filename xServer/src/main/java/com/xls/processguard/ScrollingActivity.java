@@ -1,5 +1,6 @@
 package com.xls.processguard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -26,6 +27,15 @@ public class ScrollingActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Intent intent = new Intent(this,LocalService.class);
+        startService(intent);
+
+        Intent intentR = new Intent(this,MyService.class);
+        startService(intentR);
+
+        Intent intentJ = new Intent(this,MyJobService.class);
+        startService(intentJ);
     }
 
     @Override

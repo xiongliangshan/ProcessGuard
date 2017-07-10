@@ -63,7 +63,7 @@ public class MyJobService extends JobService {
         builder.setRequiresCharging(false);
         builder.setRequiresDeviceIdle(false);
         //间隔100毫秒
-        builder.setPeriodic(100);
+        builder.setPeriodic(500);
         return builder.build();
     }
 
@@ -72,7 +72,7 @@ public class MyJobService extends JobService {
     public boolean isServiceWork(Context context, String serviceName){
         boolean isWork = false;
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        List<ActivityManager.RunningServiceInfo> runningServiceInfos = activityManager.getRunningServices(20);
+        List<ActivityManager.RunningServiceInfo> runningServiceInfos = activityManager.getRunningServices(50);
         if(runningServiceInfos.size()<=0){
             return false;
         }

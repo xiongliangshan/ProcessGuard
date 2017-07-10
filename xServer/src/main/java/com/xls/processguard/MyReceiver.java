@@ -13,12 +13,10 @@ public class MyReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
         Log.w(TAG,"收到广播:"+action);
-        if("xiong.liang.shan".equals(action)){
-            Intent intentL = new Intent(context,LocalService.class);
-            context.startService(intentL);
-        }else if("shan.liang.xiong".equals(action)){
-            Intent intentR = new Intent(context,MyService.class);
-            context.startService(intentR);
-        }
+        Intent intentR = new Intent(context,MyService.class);
+        context.startService(intentR);
+        Intent intentL = new Intent(context,LocalService.class);
+        context.startService(intentL);
+
     }
 }

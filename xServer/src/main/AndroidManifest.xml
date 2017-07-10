@@ -42,7 +42,6 @@
             android:exported="true">
             <intent-filter android:priority="1000">
                 <action android:name="xiong.liang.shan" />
-                <action android:name="shan.liang.xiong" />
             </intent-filter>
         </receiver>
 

@@ -57,10 +57,10 @@ public class MyService extends Service {
 
     @Override
     public void onDestroy() {
+        super.onDestroy();
         Intent intent = new Intent();
         intent.setAction("xiong.liang.shan");
         sendBroadcast(intent);
-        super.onDestroy();
         if(timer!=null){
             timer.cancel();
         }
